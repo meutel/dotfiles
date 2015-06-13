@@ -1,0 +1,53 @@
+alias ll='ls -lhF'
+alias la='ls -AF'
+alias l='ls -CF'
+alias lla='ls -alF'
+alias scp='scp -C'
+alias ssh='ssh -C'
+alias cp='cp -i'
+alias mv='mv -i' 
+alias rm='rm -i'
+alias df='df -h'
+case "$(uname -s)" in
+FreeBSD)
+	alias ls='ls -GF'
+	alias t='todo -d ~/.todo.cfg'
+	alias grep='grep --color=auto'
+	;;
+Linux)
+	alias ls='ls --color=auto -vF'
+	alias t='~/sources/todo.txt-cli/todo.sh -d ~/.todo.cfg'
+	alias grep='grep --color=auto'
+	;;
+OpenBSD)
+	alias startx="/usr/X11R6/bin/startx & lock -np"
+	;;
+esac
+alias less='less -X'
+alias youtube='youtube-dl -o "$YDL_TARGET/%(title)s.%(ext)s" --restrict-filenames --prefer-free-formats '
+alias sudo='sudo '
+alias ga='git-annex '
+alias gas='git-annex sync '
+alias vi='vim '
+alias tmr='~/bin/tmux_rattach.sh'
+# envoit la playlist mpc et lit le meme morceau
+function mpct() {
+	if [ $1 ] ; then
+		mpc -h $1 clear
+		mpc -f %file% playlist | mpc -h $1 -q add
+		mpc -h $1 play `mpc -f %position% -q current`
+	fi
+}
+# recoit la playlist mpc et lit le meme morceau
+function mpcf() { 
+	if [ $1 ] ; then
+		mpc clear
+		mpc -h $1 -f %file% playlist | mpc -q add 
+		mpc play `mpc -h $1 -f %position% -q current`
+	fi
+}
+# genere un password aleatoire
+randpw(){
+	LC_CTYPE=C  < /dev/urandom tr -dc '[:graph:]' | head -c${1:-10}
+	echo
+}

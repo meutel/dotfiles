@@ -1,0 +1,23 @@
+# $OpenBSD: dot.profile,v 1.4 2005/02/16 06:56:57 matthieu Exp $
+#
+# sh/ksh initialization
+
+PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
+export PATH HOME TERM
+
+export ENV=$HOME/.kshrc
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+	# include .bashrc if it exists
+	if [ -f "$HOME/.bashrc" ]; then
+		. "$HOME/.bashrc"
+	fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+	PATH="$HOME/bin:$PATH"
+fi
+
+export LC_CTYPE=fr_FR.UTF-8

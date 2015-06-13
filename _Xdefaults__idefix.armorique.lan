@@ -1,0 +1,50 @@
+URxvt*termName: xterm-256colorURxvt*background:  #000000
+URxvt*foreground:  #ffffff
+URxvt*scrollBar_right:	false
+URxvt*scrollBar:	false
+URxvt*inheritPixmap:	true
+URxvt*geometry:		84x24
+URxvt*tint:		white
+URxvt*font: xft:DejaVu Sans Mono:style=Regular:pixelsize=12:antialias=true
+URxvt*color0:      #000000
+URxvt*color1:      #A80000
+URxvt*color2:      #00A800
+URxvt*color3:      #A85400
+URxvt*color4:      #5555AA
+URxvt*color5:      #A800A8
+URxvt*color6:      #00A8A8
+URxvt*color7:      #FFFFFF
+URxvt*color8:      #545054
+URxvt*color9:      #F85450
+URxvt*color10:     #50FC50
+URxvt*color11:     #F2FC50
+URxvt*color12:     #5054F8
+URxvt*color13:     #F854F8
+URxvt*color14:     #50FCF8
+URxvt*color15:     #F8FCF8
+URxvt*urgentOnBell:  true
+URxvt*visualBell:    true
+URxvt*fading:           50
+URxvt*fadeColor:        black
+URxvt*tintColor:        white
+URxvt*shading:          30
+URxvt*blurRadius:       5
+URxvt*urlLauncher:firefox
+URxvt*jumpScroll: true
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyOutput: false
+URxvt*scrollTtyKeypress: true
+ 
+xterm*termName: xterm
+xterm*background: #000000
+xterm*foreground: #A8A8A8
+XTerm*loginShell: true
+XTerm*termName: xterm-color
+XTerm*faceName: Terminus
+XTerm*faceSize: 10
+!XTerm*internalBorder: 10
+XTerm*highlightSelection: true
+XTerm*cursorBlink: false
+XTerm*utf8: 1
+XTerm*scrollBar: false
+Xterm*scrollBarBorder: 0
