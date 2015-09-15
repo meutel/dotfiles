@@ -51,3 +51,4 @@ randpw(){
 	LC_CTYPE=C  < /dev/urandom tr -dc '[:graph:]' | head -c${1:-10}
 	echo
 }
+alias ssh_dev='ssh dev -t bin/tmux_rattach.sh'
