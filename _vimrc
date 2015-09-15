@@ -32,3 +32,6 @@ filetype plugin indent on
 inoremap jk <ESC>
 " leader key
 let mapleader = ","
+
+" modeline
+set modeline
