@@ -81,7 +81,7 @@ filetype plugin indent on
 " remap <ESC>
 inoremap jk <ESC>
 " leader key
-let mapleader = ","
+let mapleader = " "
 
 " modeline
 set modeline
@@ -90,8 +90,14 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
+" {{{ Shortcuts
+" clear search
+nnoremap <silent> <buffer> <leader>l :nohl<cr>
+" }}}
+
 " {{{ Vundle
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " }}}
+
