@@ -48,7 +48,7 @@ function mpcf() {
 }
 # genere un password aleatoire
 randpw(){
-	LC_CTYPE=C  < /dev/urandom tr -dc '[:graph:]' | head -c${1:-10}
+  strings /dev/urandom | grep -o '[[:graph:]]' | head -n 20 | tr -d '\n'
 	echo
 }
 alias ssh_dev='ssh dev -t bin/tmux_rattach.sh'
