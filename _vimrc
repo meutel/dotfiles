@@ -81,7 +81,7 @@ filetype plugin indent on
 " remap <ESC>
 inoremap jk <ESC>
 " leader key
-let mapleader = " "
+let mapleader = "\<Space>"
 
 " modeline
 set modeline
@@ -92,8 +92,29 @@ set shiftwidth=2
 
 " {{{ Shortcuts
 " clear search
-nnoremap <silent> <buffer> <leader>l :nohl<cr>
+nnoremap <Leader>l :nohl<cr>
+" NERdTree
+nnoremap <Leader>o :NERDTree<cr>
+" save
+nnoremap <Leader>w :w<CR>
+" copy/paste system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+" enter visual mode
+nmap <Leader><Leader> V
+" Automatically jump to end of text you pasted
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
 " }}}
+
+
+" Stop that stupid window from popping up
+map q: :q
 
 " {{{ Vundle
 " All of your Plugins must be added before the following line
